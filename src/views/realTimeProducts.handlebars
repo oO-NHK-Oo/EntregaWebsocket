@@ -1,0 +1,93 @@
+<form style="text-align: -webkit-center;" onsubmit="submitForm(event)">
+	<section
+		style="text-align-last: center;background-color: rgb(0, 0, 0);width: 30%;padding: 1%;margin: 1%;box-shadow: rgb(0, 247, 255) 0px 48px 100px 0px;"
+	>
+		<h2 style="color: aliceblue;" >Ingrese la información de un producto que desee agregar y a continuación
+			haga click en el botón "Enviar"</h2>
+		<label for="title-product"></label>
+		<input
+			name="title"
+			type="text"
+			placeholder="Titulo"
+			style="margin: 1rem;border-radius: 0.25rem;width: 20rem;height: 2rem;text-transform: uppercase;"
+		/>
+		<br />
+
+		<label for="description-product"></label>
+		<input
+			name="description"
+			type="text"
+			placeholder="Descripcion"
+			style="margin: 1rem;border-radius: 0.25rem;width: 20rem;height: 2rem;text-transform: uppercase;"
+		/>
+		<br />
+
+		<label for="price-product"></label>
+		<input
+			name="price"
+			type="text"
+			placeholder="Precio"
+			style="margin: 1rem;border-radius: 0.25rem;width: 20rem;height: 2rem;text-transform: uppercase;"
+		/>
+		<br />
+
+		<label for="stock-product"></label>
+		<input
+			name="stock"
+			type="text"
+			placeholder="Stock"
+			style="margin: 1rem;border-radius: 0.25rem;width: 20rem;height: 2rem;text-transform: uppercase;"
+		/>
+		<br />
+
+		<label for="code-product"></label>
+		<input
+			name="code"
+			type="text"
+			placeholder="Codigo"
+			style="margin: 1rem;border-radius: 0.25rem;width: 20rem;height: 2rem;text-transform: uppercase;"
+		/>
+		<br />
+
+		<label for="category-product"></label>
+		<input
+			name="category"
+			type="text"
+			placeholder="Categoria"
+			style="margin: 1rem;border-radius: 0.25rem;width: 20rem;height: 2rem;text-transform: uppercase;"
+		/>
+		<br />
+
+		<button
+			id="submit-button"
+			class="confirm"
+			type="submit"
+			style="width: 10rem;height: 5vh;border-radius: 0.25rem;background-color: rgb(85, 85, 85);color: whitesmoke;font-family: monospace;font-size: x-large;border: none;cursor: pointer;"
+		>Enviar</button>
+	</section>
+</form>
+
+<section
+	style="
+	background-color: whitesmoke;
+	margin: 2%;
+	padding: 2%;
+	width: 11rem;
+	border-radius: 0.25rem;box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; height: max-content"
+>
+	<a
+		href="/products"
+		style="color: rgb(0, 0, 0); text-decoration: none; font-size:3vh; font-width: bold"
+	>Ver mis productos</a>
+</section>
+
+<section
+	id="realtime-products"
+	style="display: flex;flex-wrap: wrap; 
+    justify-content: center"
+>
+
+</section>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/realtime-products-socket.js"></script>

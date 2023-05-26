@@ -1,0 +1,23 @@
+<section
+	style="background-color: rgb(0, 0, 0);margin: 2%;padding: 2%;border-radius: 0.25rem;box-shadow: rgb(0, 247, 255) 0px 4px 12px;width: 20%;height: max-content">
+	<a href="/realtimeproducts" style="color: rgb(255, 255, 255); text-decoration: none; font-size:3vh">Agrega un producto</a>
+</section>
+<section style="display:flex; justify-content:center;">
+	{{#each products}}
+		<article style="background-color: rgb(0, 0, 0);margin: 2%;padding: 2%;border-radius: 0.25rem;box-shadow: rgb(0, 247, 255) 0px 4px 12px; width: 20%; height: max-content">
+			<h2 style="color: rgb(255, 255, 255);">
+				{{this.title}}
+			</h3>
+			<p style="color: rgb(255, 255, 255)">
+				 {{this.description}}
+			</p>
+			<h2 style="color: rgb(95, 95, 95)">
+				Precio ${{this.price}}
+			</h2>
+			<h3 style="color: rgb(255, 255, 255)">
+				Stock:
+				{{this.stock}}
+			</h3>
+		</article>
+	{{/each}}
+</section>
